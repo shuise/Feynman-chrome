@@ -1,0 +1,56 @@
+{
+    "name": "Feynman 笔记",
+    "description": "笔记并不是思考的过程，笔记就是思考本身。",
+    "version": "1.0",
+    "manifest_version": 2,
+    "icons": {
+        "128": "./ui/logo.png"
+    },
+    "browser_action": {
+        "default_icon": "./ui/logo.png",
+        "default_title": "Feynman 笔记",
+        "default_popup": "feynman.html"
+    },
+    "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+    "content_scripts": [{
+        "_js": [
+            "./inject.js"
+        ],
+        "js": [
+            "./libs/html2md-1.0.js",
+            "./libs/html2canvas.js",
+            "./libs/lodash.js",
+            "./libs/md5-browser.js",
+            "./libs/qrcode.js",
+            "./libs/Readability.js",
+            "./libs/underscore-1.8.3.js",
+            "./libs/vue-2.6.10.js",
+            "./pagenote-5.4.7/pagenote.js",
+            "./tools.js",
+            "./feynman.js"
+        ],
+        "css": [
+            "./pagenote-5.4.7/pagenote.css",
+            "./ui/feynman.css"
+        ],
+        "matches": [
+            "https://*/*",
+            "http://*/*"
+        ],
+        "run_at": "document_end"
+    }],
+    "permissions": [
+        "contextMenus",
+        "notifications",
+        "storage",
+        "tabs",
+        "activeTab",
+        "scripting",
+        "browsingData",
+        "cookies",
+        "<all_urls>"
+    ],
+    "background": {
+        "service_worker": "background.js"
+    }
+}
