@@ -145,7 +145,8 @@
             });
 
             // 这里可以从服务器端拉取数据，用于 init
-            pagenote.init('FeynmanNote' ,FeynmanNote.data); // 初始化开始工作
+            pagenote.plainData = FeynmanNote.data;
+            pagenote.init('FeynmanNote', pagenote.plainData); // 初始化开始工作
 
             pagenote.addListener(function(status) {
                 let steps = pagenote.plainData.steps || [];

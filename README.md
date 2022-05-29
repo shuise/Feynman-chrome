@@ -17,4 +17,4 @@ libs/ 里为使用到的一些公共库，特别使用了 pagenote。
 ## 现状
 
 1. 使用 vue 在 chrome 扩展 v2 下可以使用，https://notes.bluetech.top
-2. v3 版本多了一些限制，为了发布到正式商店，使用 angular 重构
+2. v3 版本多了一些限制，为了发布到正式商店，使用 angular 重构（即使测试验证通过了，个人还是有些不喜欢 angular）
