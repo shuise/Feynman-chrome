@@ -2,7 +2,7 @@
     "name": "Feynman 笔记",
     "description": "笔记并不是思考的过程，笔记就是思考本身。",
     "version": "1.0",
-    "manifest_version": 2,
+    "manifest_version": 3,
     "icons": {
         "128": "./ui/logo.png"
     },
@@ -11,7 +11,6 @@
         "default_title": "Feynman 笔记",
         "default_popup": "feynman.html"
     },
-    "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
     "content_scripts": [{
         "_js": [
             "./inject.js"
@@ -27,7 +26,9 @@
             "./libs/vue-2.6.10.js",
             "./pagenote-5.4.7/pagenote.js",
             "./tools.js",
-            "./feynman.js"
+            "./libs/angular.min.js",
+            "./data-model.js",
+            "./angular-view.js"
         ],
         "css": [
             "./pagenote-5.4.7/pagenote.css",

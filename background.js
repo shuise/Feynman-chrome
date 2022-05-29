@@ -1,5 +1,5 @@
 //API list
-const domain = 'https://notes.bluetech.top/api';
+const domain = 'https://notes.bluetech.top1/api';
 const APIs = {
     User: {
     	login: 'post@/user/login'

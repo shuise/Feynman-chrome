@@ -205,6 +205,11 @@
         document.body.appendChild(app);
         document.querySelector('#feynotes-wrapper').style.display = 'block';
 
+        let weRead = {
+            //mixins
+            //template: https://cn.vuejs.org/v2/api/#template
+        };
+
         new Vue({
             el: '#feynotes-wrapper',
             data: function() {
